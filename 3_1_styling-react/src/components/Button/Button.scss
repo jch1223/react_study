@@ -1,0 +1,9 @@
+@import 'utills';
+.button {
+  width: 150px;
+  height: 100px;
+  font-size: 20px;
+  color: material-color('cyan', '400');
+  background: material-color('blue-grey', '600');
+  @include material-shadow(5, 5);
+}
