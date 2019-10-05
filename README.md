@@ -13,4 +13,9 @@
 
 - 3-1 sass를 사용할 때 폴더 트리 짜는 방법, sass를 react 컴포넌트에 적용하기
 - 3-2 jsonplaceholder를 이용한 api 연동
-- 3-3 news api를 활용한 api 연동 및 styled-component 적용하기
+
+### 4강 - api axios 사용하기, react-router-dom
+
+- 4-1 news api를 활용한 api 연동 및 styled-component 적용하기
+- 4-2 react-router-dom을 이용한 url 생성 및 params, query 처리
+- 4-3 redux action 기초
