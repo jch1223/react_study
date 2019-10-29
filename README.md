@@ -19,3 +19,7 @@
 - 4-1 news api를 활용한 api 연동 및 styled-component 적용하기
 - 4-2 react-router-dom을 이용한 url 생성 및 params, query 처리
 - 4-3 redux action 기초
+
+### 5강 - redux 사이드프로젝트
+
+- 리덕스 ducks패턴을 이용한 프로젝트
