@@ -25,13 +25,13 @@ export default (state = initialState, action) => {
     case INCREMENT:
       return {
         ...state,
-        number: state.num + 1
+        number: state.number + 1
       };
 
     case DECREMENT:
       return {
         ...state,
-        number: state.num - 1
+        number: state.number - 1
       };
 
     case CHANGE_COLOR:
