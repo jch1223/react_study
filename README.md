@@ -20,8 +20,12 @@
 - 4-2 react-router-dom을 이용한 url 생성 및 params, query 처리
 - 4-3 redux action 기초
 
-### 5강 - redux 사이드프로젝트
+### 5-1강 - redux 사이드프로젝트
 
 - 리덕스 ducks패턴을 이용한 프로젝트
 - redux-action 라이브러리를 사용하여 action creatore, reducer 생성
 - bindActionCreators를 통해 connect 작성
+
+### 5-2강 - redux middleware
+
+- redux-saga를 이용한 비동기 처리
