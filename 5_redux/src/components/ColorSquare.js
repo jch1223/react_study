@@ -28,7 +28,12 @@ class ColorSquare extends Component {
       <div className='ColorSquare' style={style}>
         {colors.map(color => {
           return (
-            <Color key={color} color={color} active={selected} onClick={() => onSelect(color)} />
+            <Color
+              key={color}
+              color={color}
+              active={selected === color ? true : false}
+              onClick={() => onSelect(color)}
+            />
           );
         })}
       </div>
