@@ -23,3 +23,4 @@
 ### 5강 - redux 사이드프로젝트
 
 - 리덕스 ducks패턴을 이용한 프로젝트
+- redux-action 라이브러리를 사용하여 action creatore, reducer 생성
