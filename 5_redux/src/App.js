@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import CounterContainer from './containers/CounterContainer';
-import ColorList from './components/ColorList';
+import ColorListContainer from './containers/ColorListContainer';
 import ColorSquareContainer from './containers/ColorSquareContainer';
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
       <div className='App'>
         <CounterContainer />
         <ColorSquareContainer />
-        <ColorList />
+        <ColorListContainer />
       </div>
     );
   }
