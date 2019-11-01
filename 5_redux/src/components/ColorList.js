@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ColorList.css';
+import ListItem from '../components/ListItem';
 
 class ColorList extends Component {
   handleChane = e => {
@@ -37,8 +38,9 @@ class ColorList extends Component {
         <ul>
           {list.map(item => {
             return (
-              <div
+              <ListItem
                 key={item.id}
+                item={item}
                 style={{
                   backgroundColor: item.color,
                   opacity: item.opacity,
@@ -46,11 +48,9 @@ class ColorList extends Component {
                   height: '50px',
                   float: 'left'
                 }}
-                onClick={() => this.handleUpdate(item.id)}
-                onContextMenu={e => {
-                  e.preventDefault();
-                  this.handleRemove(item.id);
-                }}></div>
+                onUpdate={this.handleUpdate}
+                onRemove={this.handleRemove}
+              />
             );
           })}
         </ul>
