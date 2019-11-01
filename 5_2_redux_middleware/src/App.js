@@ -1,46 +1,48 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { changeInput, insert } from './store/modules/form';
+import * as formActions from './store/modules/form';
+import { bindActionCreators } from 'redux';
 
 class App extends Component {
-	handleChange = e => {
-		const { value } = e.target;
-		this.props.changeInput(value);
-	};
+  handleChange = e => {
+    const { value } = e.target;
+    this.props.FormActions.changeInput(value);
+  };
 
-	handleSubmit = e => {
-		e.preventDefault();
+  handleSubmit = e => {
+    e.preventDefault();
 
-		const { changeInput, insert, input } = this.props;
+    const { FormActions, input } = this.props;
 
-		insert(input);
-		changeInput('');
-	};
+    FormActions.insertAsync(input);
+    FormActions.changeInput('');
+  };
 
-	render() {
-		const { input, list } = this.props;
+  render() {
+    const { input, list } = this.props;
 
-		return (
-			<div>
-				<form action="">
-					<input value={input} onChange={this.handleChange} />
-					<button onClick={this.handleSubmit}>입력</button>
-				</form>
-				{list.map(item => {
-					return <div key={item.id}>{item.text}</div>;
-				})}
-			</div>
-		);
-	}
+    return (
+      <div>
+        <form action=''>
+          <input value={input} onChange={this.handleChange} />
+          <button onClick={this.handleSubmit}>입력</button>
+        </form>
+        {list.map(item => {
+          return <div key={item.id}>{item.text}</div>;
+        })}
+      </div>
+    );
+  }
 }
 
 export default connect(
-	({ form: { input, list } }) => ({
-		input,
-		list
-	}),
-	{
-		changeInput,
-		insert
-	}
+  ({ form: { input, list } }) => ({
+    input,
+    list
+  }),
+  dispatch => {
+    return {
+      FormActions: bindActionCreators(formActions, dispatch)
+    };
+  }
 )(App);
