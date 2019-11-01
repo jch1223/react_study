@@ -24,3 +24,4 @@
 
 - 리덕스 ducks패턴을 이용한 프로젝트
 - redux-action 라이브러리를 사용하여 action creatore, reducer 생성
+- bindActionCreators를 통해 connect 작성
