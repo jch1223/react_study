@@ -28,4 +28,4 @@
 
 ### 5-2강 - redux middleware
 
-- redux-saga를 이용한 비동기 처리
+- redux-thunk, redux-promise-middleware, redux-saga를 이용한 비동기 처리
